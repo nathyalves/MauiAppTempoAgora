@@ -1,19 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppTempoAgora.MainPage">
+             x:Class="MauiAppTempoAgora.MainPage"
+             BackgroundColor="White">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="30,20" Spacing="15">
 
-            <Entry x:Name="txt_cidade" />
-            <Button Text="Buscar" Clicked="Button_Clicked" />
+            <Label Text="Previsão do Tempo" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
 
-            <Label x:Name="lbl_res" />
+            <Entry x:Name="txt_cidade"
+                   Placeholder="Digite o nome da cidade..."
+                   FontSize="18"
+                   Margin="0,10"
+                   BackgroundColor="LightGray"
+                   Keyboard="Text" />
+
+            <Button Text="Buscar" 
+                    Clicked="Button_Clicked"
+                    FontSize="18"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="10"/>
+
+            <Label x:Name="lbl_res"
+                   FontSize="18"
+                   TextColor="Black"
+                   Padding="10"
+                   LineBreakMode="WordWrap" />
 
         </VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>
+
+
